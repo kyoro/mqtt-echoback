@@ -1,0 +1,9 @@
+mqtt_server: 
+rules:
+  target_topic:
+    value: target_value
+    messages:
+      - topic: response_topic
+        payload: response_value
+      - topic: response_topic2
+        payload: response_value
