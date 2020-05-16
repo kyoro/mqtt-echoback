@@ -5,6 +5,7 @@ services:
     build:
       context: '.'
     volumes:
-      - ".:/src"
-    working_dir: "/src"
+      - ".:/app:cached"
+      - "/app/node_modules"
+    working_dir: "/app"
     command: "npm start"
