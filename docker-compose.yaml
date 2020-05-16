@@ -1,0 +1,10 @@
+version: '2'
+services:
+  node:
+    container_name: mqtt-echoback
+    build:
+      context: '.'
+    volumes:
+      - ".:/src"
+    working_dir: "/src"
+    command: "npm start"
