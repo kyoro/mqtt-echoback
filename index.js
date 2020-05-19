@@ -27,7 +27,7 @@ mqttClient.on('message', function (topic, message) {
     }
 });
 setInterval(()=>{
-    if(messages.length()>0){
+    if(messages.count()>0){
         var params = messages.pop();
         mqttClient.publish(params);
     }
