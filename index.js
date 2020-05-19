@@ -19,7 +19,7 @@ mqttClient.on('message', function (topic, message) {
     if(rule && rule['value'] == message){
         console.log("Receive: %s %s", topic, message);
         rule['messages'].forEach(element => {
-            messages.push([element['topic'], payloadelement['payload']]);
+            messages.push([element['topic'], element['payload']]);
             
             console.log("Publish: %s %s", element['topic'], element['payload']);
         });
